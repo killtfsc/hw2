@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+
+public class Bank {
+    private double amount;
+    private ArrayList<Double> transactions;
+    
+    public Bank() {
+        amount = 0.0;
+        transactions = new ArrayList<>();
+    
+    }
+    
+    public void deposit(double depositAmount) {
+        if (depositAmount > 0) {
+            amount += depositAmount;
+            transactions.add(depositAmount);
+            
+        }
+    }
+    
+    public void withdraw(double withdrawAmount) {
+        if (withdrawAmount > 0) {
+            amount -= withdrawAmount;
+            transactions.add(-withdrawAmount);
+        }
+    
+    }
+    
+    public void listInteractions() {
+        for (double transactions : transactions); {
+            System.out.println(transactions);
+            
+        }
+    }
+    
+  
+    
+    }
